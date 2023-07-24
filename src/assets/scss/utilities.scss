@@ -1,5 +1,8 @@
 // utilities
-$margin-col: 10px;
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
 .row{
     display: flex;
     height: 100%;
@@ -56,4 +59,15 @@ $margin-col: 10px;
 }
 .text-center{
     text-align: center;
+}
+
+// 
+
+.button{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
 }
