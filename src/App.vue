@@ -19,6 +19,11 @@ export default{
       MainComp,
       FooterComp
     },
+    methods:{
+        getImgPath: function(imgPath){
+        return new URL(`../assets/img/${imgPath}`, import.meta.url).href;
+      },
+    }
 }
 </script>
 
