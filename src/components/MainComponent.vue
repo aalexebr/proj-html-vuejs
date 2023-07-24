@@ -1,5 +1,7 @@
 <script>
 import {store} from '../store'
+import Jumbotron from './jumbotron.vue'
+
 export default{
     data(){
       return{
@@ -7,13 +9,14 @@ export default{
       }
     },
     components: {
-
+      Jumbotron,
     }
 }
 </script>
 
 <template>
 <main>
+	<Jumbotron/>
     MAIN
 </main>
 </template>
@@ -22,4 +25,5 @@ export default{
 @use '../assets/scss/main.scss' as *;
 @use '../assets/scss/debugger.scss' as *;
 @use '../assets/scss/utilities.scss' as *;
+
 </style>
