@@ -13,9 +13,9 @@ export default{
 </script>
 
 <template>
-<div>
-  templae
-</div>
+<footer>
+    FOOTER
+</footer>
 </template>
 
 <style lang="scss" scoped>
