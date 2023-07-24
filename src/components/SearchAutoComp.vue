@@ -1,6 +1,7 @@
 <script>
 import {store} from '../store'
-import ListingCard from './ListingCard.vue'
+import AutoTypeCard from './AutoTypeCard.vue'
+import AutoGeneralCard from './AutoGeneralCard.vue'
 export default{
     data(){
       return{
@@ -8,7 +9,8 @@ export default{
       }
     },
     components: {
-        ListingCard,
+        AutoTypeCard,
+        AutoGeneralCard
     }
 }
 </script>
@@ -54,10 +56,20 @@ export default{
             </button>
         </div>
     </div>
+    <!-- car types -->
     <div class="row">
-            <ListingCard class="col-2" :i="i"
+            <AutoTypeCard class="col-2" :i="i"
             v-for="(type,i) in store.AutoTypeList" :key="i"/>
     </div>
+    <!-- auto cards results -->
+    <div class="row wrap">
+            <AutoGeneralCard class="col-3"
+			v-for="(auto,i) in store.ListedAutos" :key="i" :i="i"/>
+		<div class="button btn-no-border">
+			show more
+		</div>
+    </div>
+	
 </div>
 </template>
 
@@ -76,7 +88,7 @@ export default{
         height: 100%;
     }
 }
-.col-2{
+.col-2,.col-3{
     @include debug-one;
 }
 </style>
