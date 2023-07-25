@@ -2,6 +2,7 @@
 import {store} from '../store'
 import Jumbotron from './jumbotron.vue'
 import SearchAutoComp from './SearchAutoComp.vue'
+import AutoInfoComp from './AutoInfoComp.vue'
 
 export default{
     data(){
@@ -11,7 +12,8 @@ export default{
     },
     components: {
       Jumbotron,
-	  SearchAutoComp
+      SearchAutoComp,
+      AutoInfoComp
     }
 }
 </script>
@@ -21,6 +23,7 @@ export default{
 	<Jumbotron/>
 	<div class="container">
 		<SearchAutoComp/>
+    <AutoInfoComp/>
 	</div>
 </main>
 </template>

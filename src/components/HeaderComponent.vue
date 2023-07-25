@@ -47,7 +47,7 @@ export default{
     <div class="container">
         <div class="row align-center">
             <a href="#">
-                <div class="logo">
+                <div class="logo row align-center">
                     <img src="../assets/img/logo-autocar11.png" alt="">
                 </div>
             </a>
@@ -87,7 +87,8 @@ header{
     @include debug-large-two;
 }
 .logo{
-    width: 100px;
+    width: 150px;
+    padding-top: 3px;
 }
 nav{
     ul{

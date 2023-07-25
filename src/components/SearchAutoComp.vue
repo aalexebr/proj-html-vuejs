@@ -65,7 +65,7 @@ export default{
     <div class="row wrap">
             <AutoGeneralCard class="col-3"
 			v-for="(auto,i) in store.ListedAutos" :key="i" :i="i"/>
-		<div class="button btn-no-border">
+		<div class="button btn-no-border m-auto">
 			show more
 		</div>
     </div>

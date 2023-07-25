@@ -61,12 +61,12 @@ export default{
 @use '../assets/scss/utilities.scss' as *;
 
 .jumbotron{
-    height: 300px;
+    height: 450px;
 	color: white;
 	.container{
 		right: 0;
 		left: 0;
-		height: 300px;
+		height: 450px;
 		.jumbo-info{
 			width: calc(100% / 3);
 			top: 50%;
