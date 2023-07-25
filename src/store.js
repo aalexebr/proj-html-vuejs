@@ -93,5 +93,27 @@ export const store = reactive({
                             brand:'seat',
                             fuelType:'gasoline',
                         },
+                    ],
+                    Testimonials:[
+                        {
+                            name:'adam',
+                            img:'man1.png',
+                            text:'We are a gallery vehicle dealer. Before we met this site our sales were shit.'
+                        },
+                        {
+                            name:'cristian',
+                            img:'testimonial2-1.png',
+                            text:'We are a gallery vehicle dealer. Before we met this site our sales were shit.'
+                        },
+                        {
+                            name:'rob',
+                            img:'man2.png',
+                            text:'We are a gallery vehicle dealer. Before we met this site our sales were shit.'
+                        },
+                        {
+                            name:'elizabeth',
+                            img:'testimonial4-1.png',
+                            text:'We are a gallery vehicle dealer. Before we met this site our sales were shit.'
+                        },
                     ]
 });
