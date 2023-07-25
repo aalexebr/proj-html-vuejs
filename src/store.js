@@ -145,5 +145,63 @@ export const store = reactive({
                             title: 'Is the AURIUS a secret weapon from NorthKorea',
                             text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt accusamus, nihil cumque unde omnis?'
                         }
+                    ],
+                    BusinessInfo:{
+                       location: {
+                            icon:'fa-location-dot',
+                            text:'North Korea'
+                        },
+                       contact: {
+                            icon:'fa-phone-volume',
+                            text:'+001 000000001'
+                        },
+                        email:{
+                            icon:'fa-envelope',
+                            text:'kim_j_un@nk.nk'
+                        },
+                    },
+                    myAccountNav:[
+                        {
+                            text:'my account',
+                            link:'#'
+                        },
+                        {
+                            text:'checkout',
+                            link:'#'
+                        },
+                        {
+                            text:'cart',
+                            link:'#'
+                        },
+                        {
+                            text:'packages',
+                            link:'#'
+                        },
+                        {
+                            text:'add car',
+                            link:'#'
+                        }
+                    ],
+                    quickLinksNav:[
+                        {
+                            text:'home',
+                            link:'#'
+                        },
+                        {
+                            text:'about us',
+                            link:'#'
+                        },
+                        {
+                            text:'blog',
+                            link:'#'
+                        },
+                        {
+                            text:'contact',
+                            link:'#'
+                        },
+                        {
+                            text:'refund & returns',
+                            link:'#'
+                        }
                     ]
 });
