@@ -61,16 +61,38 @@ export default{
                     </li>
                 </ul>
                 <a href="#" class="button">
-                    my account
+                    <div class="row align-center">
+                        <div class="img">
+                        <img src="../assets/img/header_icons/padlock.png" alt="">
+                    </div>
+                    <span class="capitalize">
+                       my account 
+                    </span>
+                    </div>
                 </a>
                 <a href="#" class="button">
-                    add car
+                    <div class="row align-center">
+                        <div class="img">
+                        <img src="../assets/img/header_icons/add.png" alt="">
+                    </div>
+                    <span class="capitalize">
+                       add car
+                    </span>
+                    </div>
                 </a>
                 <div class="hamburger">
-                    I
+                    <font-awesome-icon icon="fa-solid fa-bars" class="icon"/>
                 </div>
                 <a href="#" class="button">
-                    {{ store.contactNumber }}
+                    <div class="row align-center">
+                        <div class="img">
+                        <img src="../assets/img/header_icons/headphones.png" alt="">
+                    </div>
+                    <span class="capitalize">
+                        {{ store.BusinessInfo.contact.text }}
+                    </span>
+                    </div>
+                    
                 </a>
             </nav>
         </div>
@@ -82,25 +104,40 @@ export default{
 @use '../assets/scss/main.scss' as *;
 @use '../assets/scss/debugger.scss' as *;
 @use '../assets/scss/utilities.scss' as *;
-
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
 header{
-    @include debug-large-two;
+    // @include debug-large-two;
+    padding: 5px 0;
 }
 .logo{
     width: 150px;
     padding-top: 3px;
 }
+.img{
+    width: 40px;
+    margin-right: 5px;
+    img{
+        filter: invert(100%)
+    }
+}
 nav{
     ul{
         li{
             display: inline-block;
-            padding: 5px;
+            // padding: 5px;
             margin: 0 5px;
             text-transform: capitalize;
         }
     }
     .button{
-        margin: 0 5px;
+        margin-left: 5px;
     }
+}
+.icon{
+    font-size: 1.50rem;
+    padding: 0 10px;
 }
 </style>

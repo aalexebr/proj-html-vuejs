@@ -47,8 +47,8 @@ export default{
 				<p class="">
 					subscribe to out naskhfaksl
 				</p>
-				<input type="text">
-				<input type="text">
+				<input type="text" placeholder="your email address">
+				<input type="text" placeholder="subsc &#8594" class="text-center">
 			</div>
 			<div class="col-25">
 				<h2 class="capitalize">
@@ -109,7 +109,8 @@ footer{
     @include debug-one;
 	input{
 		width: 100%;
-		height: 40px;
+		// height: 40px;
+		padding: 20px;
 	}
   }
 }

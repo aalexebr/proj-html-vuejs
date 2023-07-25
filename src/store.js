@@ -153,7 +153,7 @@ export const store = reactive({
                         },
                        contact: {
                             icon:'fa-phone-volume',
-                            text:'+001 000000001'
+                            text:'+001 00001'
                         },
                         email:{
                             icon:'fa-envelope',
