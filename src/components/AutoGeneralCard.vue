@@ -21,20 +21,20 @@ export default{
 <template>
 <div class="card">
 	<img :src="getImgPath(store.ListedAutos[i].img)" alt="">
-	<span class="name">
-		{{ store.ListedAutos[i].name }}
+	<span class="name capitalize">
+		{{ store.ListedAutos[i].name   }}  <font-awesome-icon icon="fa-solid fa-circle-check"/>
 	</span>
-	<span class="type">
+	<span class="type capitalize">
 		{{ store.ListedAutos[i].type }}
 	</span>
-	<span>
-		{{ store.ListedAutos[i].price }}
+	<span class="capitalize">
+		<font-awesome-icon icon="fa-solid fa-dollar-sign"/> {{  store.ListedAutos[i].price }}
 	</span>
-	<span>
-		{{ store.ListedAutos[i].brand }}
+	<span class="capitalize">
+		<font-awesome-icon icon="fa-solid fa-car"/>  {{   store.ListedAutos[i].brand }}
 	</span>
-	<span>
-		{{ store.ListedAutos[i].fuelType }}
+	<span class="capitalize">
+		<font-awesome-icon icon="fa-solid fa-gas-pump"/> {{ store.ListedAutos[i].fuelType }}
 	</span>
 </div>
 </template>
@@ -51,6 +51,9 @@ export default{
 	background-color: white;
 	.name,.type{
 		display: block;
+	}
+	span{
+		margin-right: 5px;
 	}
 }
 </style>
