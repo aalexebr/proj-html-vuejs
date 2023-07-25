@@ -115,5 +115,35 @@ export const store = reactive({
                             img:'testimonial4-1.png',
                             text:'We are a gallery vehicle dealer. Before we met this site our sales were shit.'
                         },
+                    ],
+                    Articles:[
+                        {
+                            img:'news-autocar-1.jpg',
+                            date:'29-01-1886',
+                            source:'auto car',
+                            title: 'Why is BMW associated with Nazis',
+                            text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt accusamus, nihil cumque unde omnis?'
+                        },
+                        {
+                            img:'news-autocar-2.jpg',
+                            date:'29-01-1886',
+                            source:'auto car',
+                            title: 'Why is Audi associated with the CCCP',
+                            text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt accusamus, nihil cumque unde omnis?'
+                        },
+                        {
+                            img:'news-autocar-5.jpg',
+                            date:'29-01-1886',
+                            source:'auto car',
+                            title: 'Is SKODA really a chinese spy',
+                            text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt accusamus, nihil cumque unde omnis?'
+                        },
+                        {
+                            img:'news-autocar-6.jpg',
+                            date:'29-01-1886',
+                            source:'auto car',
+                            title: 'Is the AURIUS a secret weapon from NorthKorea',
+                            text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt accusamus, nihil cumque unde omnis?'
+                        }
                     ]
 });

@@ -4,6 +4,7 @@ import Jumbotron from './jumbotron.vue'
 import SearchAutoComp from './SearchAutoComp.vue'
 import AutoInfoComp from './AutoInfoComp.vue'
 import TestimonialsComp from './TestimonialsComp.vue'
+import ArticlesComp from './ArticlesComp.vue'
 
 export default{
     data(){
@@ -15,7 +16,8 @@ export default{
       Jumbotron,
       SearchAutoComp,
       AutoInfoComp,
-      TestimonialsComp
+      TestimonialsComp,
+      ArticlesComp
     }
 }
 </script>
@@ -28,6 +30,9 @@ export default{
     <AutoInfoComp/>
 	</div>
   <TestimonialsComp/>
+  <div class="container">
+    <ArticlesComp/>
+  </div>
 </main>
 </template>
 

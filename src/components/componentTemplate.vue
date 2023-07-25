@@ -8,7 +8,12 @@ export default{
     },
     components: {
 
-    }
+    },
+    methods:{
+		getImgPath: function(imgPath){
+        return new URL(`../assets/xxx/${imgPath}`, import.meta.url).href;
+      },
+    },
 }
 </script>
 
