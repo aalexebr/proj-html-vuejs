@@ -32,25 +32,29 @@ export default{
 <div class="jumbotron pos-relative">
 	<div @click="prevSlide"
 		class="slider-button pos-absolute prev">
-			x
+		<font-awesome-icon icon="fa-solid fa-chevron-left" class="icon"/>
 	</div>
 	<div @click="nextSlide"
 		class="slider-button pos-absolute next">
-			x
+		<font-awesome-icon icon="fa-solid fa-chevron-right" class="icon"/>
 	</div>
 	<div class="container pos-absolute">
 		<div class="jumbo-info pos-absolute">
-			<h1>
+			<h1 class="capitalize">
 				buy and sell your car at its value
 			</h1>
 			<p>
-				find the right price and dealer
+				Find the right price and dealer
 			</p>
-			<a href="#">
+			<a href="#" class="button capitalize">
 				more info
 			</a>
 		</div>
+		<div class="circle pos-absolute">
+			<div class="dot pos-absolute"></div>
+		</div>
 	</div>
+	
   <img :src="sliderPath[count]" alt="">
 </div>
 </template>
@@ -67,24 +71,24 @@ export default{
 		right: 0;
 		left: 0;
 		height: 450px;
+		max-width: 1100px;
 		.jumbo-info{
 			width: calc(100% / 3);
 			top: 50%;
 			transform: translate(0, -50%);
-			text-transform: capitalize;
+			& *{
+				margin-bottom: 10px;
+			}
 		}
 	}
     img{
         object-fit: cover;
         height: 100%;
-        // padding: 50px;
     }
     .slider-button{
         color: white;
         display: inline-block;
-        background-color: aqua;
-        height: 20px;
-        width: 20px;
+		padding: 10px;
         z-index: 1;
 		border-radius: 10px;
 		cursor: pointer;
@@ -100,5 +104,25 @@ export default{
 			transform: translate(0, -50%);
 		}
     }
+	.circle{
+		color: grey;
+		border: 2px solid white;
+		height: 40px;
+		width: 40px;
+		text-align: end;
+		border-radius: 40px;
+		bottom: 40px;
+		right: 0;
+				.dot{
+			height: 2px;
+			width: 2px;
+			border: 2px solid grey;
+			border-radius: 2px;
+			top: 50%;
+			left: 75%;
+			transform: translate(-50%, -50%);
+		}
+	}
 }
+
 </style>
