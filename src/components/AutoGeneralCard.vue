@@ -47,7 +47,8 @@ export default{
 .card{
     width: 100%;
 	padding: 5px;
-	margin-bottom: 10px;
+	// margin-bottom: 5px;
+	background-color: white;
 	.name,.type{
 		display: block;
 	}

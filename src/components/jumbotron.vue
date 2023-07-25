@@ -47,7 +47,9 @@ export default{
 				Find the right price and dealer
 			</p>
 			<a href="#" class="button capitalize">
-				more info
+				<span>
+					more info &#8594
+				</span>
 			</a>
 		</div>
 		<div class="circle pos-absolute">

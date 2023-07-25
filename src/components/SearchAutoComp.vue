@@ -57,19 +57,23 @@ export default{
         </div>
     </div>
     <!-- car types -->
-    <div class="row">
-            <AutoTypeCard class="col-2" :i="i"
-            v-for="(type,i) in store.AutoTypeList" :key="i"/>
+    <div class="row shadow">
+        <div class="col-2" v-for="(type,i) in store.AutoTypeList" :key="i">
+            <AutoTypeCard :i="i"/>
+        </div>
+            
     </div>
     <!-- auto cards results -->
-    <div class="row wrap">
-            <AutoGeneralCard class="col-3"
-			v-for="(auto,i) in store.ListedAutos" :key="i" :i="i"/>
-		<div class="button btn-no-border m-auto">
-			show more
-		</div>
+    <div class="row wrap shadow">
+        <div class="col-3" v-for="(auto,i) in store.ListedAutos" :key="i">
+            <AutoGeneralCard :i="i"/>
+        </div>     
     </div>
-	
+    <div class="row justify-center">
+        <div class="button btn-no-border">
+                show all cars &#8594
+        </div>
+    </div>
 </div>
 </template>
 
@@ -80,15 +84,44 @@ export default{
 
 .col-8{
     width: calc(100% / 8);
-    @include debug-one;
-    height: 45px;
-    padding: 5px;
+    // @include debug-one;
+    // height: 45px;
+    padding: 10px;
     input,select,button{
         width: 100%;
         height: 100%;
     }
+    input{
+        border: 1px solid #AAAAAA;
+        border-radius: 5px;
+        background-color: white;
+        color: #AAAAAA;
+        padding: 15px;
+    }
+    select{
+        border: 1px solid #AAAAAA;
+        border-radius: 5px;
+        background-color: white;
+        color: #000000;
+        padding: 15px;
+    }
+}
+.auto-type-list{
+    -webkit-box-shadow: 0px 0px 22px 2px #dfdfdf; 
+    box-shadow: 0px 0px 22px 2px rgb(214, 214, 214);
+    background-color: #ededed;
+    margin: 10px 0;
+}
+.shadow{
+    -webkit-box-shadow: 0px 0px 22px 2px rgba(112,112,112,0.49); 
+    box-shadow: 0px 0px 22px 2px rgba(112,112,112,0.49);
+    background-color: #ededed;
+    margin-bottom: 15px;
 }
 .col-2,.col-3{
-    @include debug-one;
+    padding: 1px;
+}
+.button{
+    margin-bottom: 20px;
 }
 </style>

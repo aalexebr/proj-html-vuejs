@@ -21,17 +21,17 @@ export default{
 </script>
 
 <template>
-<div class="auto-type-card text-center">
-  
-    <img :src="getImgPath(store.AutoTypeList[i].img)" :alt="store.AutoTypeList[i].type">
-  
-  <span class="type">
-    {{ store.AutoTypeList[i].type }}
-  </span>
-  <span>
-    listings : N
-  </span>
-</div>
+  <div class="auto-type-card text-center">
+    
+      <img :src="getImgPath(store.AutoTypeList[i].img)" :alt="store.AutoTypeList[i].type">
+    
+    <span class="type">
+      {{ store.AutoTypeList[i].type }}
+    </span>
+    <span>
+      listings : N
+    </span>
+  </div>
 
 </template>
 
@@ -42,7 +42,9 @@ export default{
 
 .auto-type-card{
     // height: 60px;
+    // @include debug-one;
     // width: 60px;
+    background-color: white;
     .img{
         width: 100%;
     }

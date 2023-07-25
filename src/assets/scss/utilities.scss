@@ -9,6 +9,7 @@
 .column{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 .wrap{
     flex-wrap: wrap;
@@ -91,6 +92,7 @@
     padding: 10px;
     border-radius: 5px;
     text-transform: capitalize;
+    cursor: pointer;
 }
 .btn-no-border{
     border-radius: 0;
