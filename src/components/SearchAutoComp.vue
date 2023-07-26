@@ -7,7 +7,7 @@ export default{
       return{
         store,
         listFlag : [],
-        selectType : 'All',
+        selectType : '',
       }
     },
     components: {
@@ -37,10 +37,15 @@ export default{
             }
         },
         search(){
+            this.selectType=''
             for(let j=0; j<this.store.AutoTypeList.length; j++){
                 this.listFlag.push(this.store.AutoTypeList[j].type)
                 console.log(this.selectType)
             }
+        },
+        selectChangeSearch(){
+            this.listFlag=[]
+            this.listFlag.push(this.selectType)
         }
     },
     created(){
@@ -53,7 +58,7 @@ export default{
 <template>
 <div class="container">
     <!-- search bar -->
-    <form action="" @click.prevent="search()">
+    <form action="" @submit.prevent="search()">
         <div class="row">
             <div class="col-8">
                 <input type="text" placeholder="Keywords" class="text-center">
@@ -62,9 +67,9 @@ export default{
                 <input type="text" placeholder="Location" class="text-center">
             </div>
             <div class="col-8">
-                <select name="" id="" class="text-center">
-                    <option value="">{{ selectType }}</option>
-                    <option value="" v-for="(type,i) in store.AutoTypeList" :key="i" class="capitalize">
+                <select name="" id="" class="text-center" v-model="selectType" @change="selectChangeSearch">
+                    <option value="" disabled>All Categories</option>
+                    <option :value="store.AutoTypeList[i].type" v-for="(type,i) in store.AutoTypeList" :key="i" class="capitalize">
                         {{ store.AutoTypeList[i].type }}
                     </option>
                 </select>
