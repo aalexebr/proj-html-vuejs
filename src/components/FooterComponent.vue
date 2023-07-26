@@ -35,9 +35,15 @@ export default{
 					</li>
 				</ul>
 				<div class="socials">
-					<font-awesome-icon icon="fa-brands fa-facebook-f" />
-					<font-awesome-icon icon="fa-brands fa-twitter" />
-					<font-awesome-icon icon="fa-brands fa-instagram" />
+					<a href="#">
+						<font-awesome-icon icon="fa-brands fa-facebook-f" class="icon"/>
+					</a>
+					<a href="#">
+						<font-awesome-icon icon="fa-brands fa-twitter" class="icon"/>
+					</a>
+					<a href="#">
+						<font-awesome-icon icon="fa-brands fa-instagram" class="icon"/>
+					</a>
 				</div>
 			</div>
 			<div class="col-auto">
@@ -45,7 +51,7 @@ export default{
 					join our news letter
 				</h2>
 				<p class="">
-					subscribe to out naskhfaksl
+					subscribe to recieve our propaganda
 				</p>
 				<input type="text" placeholder="your email address">
 				<input type="text" placeholder="subsc &#8594" class="text-center">
@@ -54,7 +60,7 @@ export default{
 				<h2 class="capitalize">
 					my account
 				</h2>
-				<ul>
+				<ul class="before">
 					<li class="capitalize"
 						v-for="(navLinks, i) in store.myAccountNav" :key="i">
 						<a :href="navLinks.link">{{ navLinks.text }}</a>
@@ -65,10 +71,12 @@ export default{
 				<h2 class="capitalize">
 					quick links
 				</h2>
-				<li class="capitalize"
+				<ul class="before">
+					<li class="capitalize"
 						v-for="(navLinks, i) in store.quickLinksNav" :key="i">
 						<a :href="navLinks.link">{{ navLinks.text }}</a>
 					</li>
+				</ul>	
 			</div>
         </div>
       </div>
@@ -91,27 +99,59 @@ footer{
 	max-width: 1200px;
 	margin: auto
   }
+  .logo{
+	margin-bottom: 15px;
+	width: 175px;
+  }
+  h2{
+	margin-bottom: 10px
+  }
+  .socials{
+	padding: 10px 0 10px 0;
+	a{
+		margin: 5px;
+	}
+	.icon{
+		padding: 5px;
+	}
+  }
   .col-25{
-    @include debug-two;
+    // @include debug-two;
+	padding: 0 25px 0 25px;
+	&:first-of-type{
+		padding-left: 0;
+	}
 	li{
-		display: default;
-		&::before{
+		margin-bottom: 10px;
+	}
+	.before{
+		li{
+			margin-bottom: 5px;
+			&::before{
 			display: inline-block;
 			content: "";
 			border-top: 3px solid white;
 			width: 10px;
 			margin: 0 10px;
     		transform: translateY(-5px);
+			}
 		}
 	}
   }
   .col-auto{
-    @include debug-one;
+    // @include debug-one;
+	padding: 0 25px 0 25px;
 	input{
 		width: 100%;
 		// height: 40px;
 		padding: 20px;
 	}
+	p{
+		margin-bottom: 10px;
+	}
   }
+}
+.copyright{
+	margin-top: 40px;
 }
 </style>
