@@ -25,11 +25,11 @@ export default{
     
       <img :src="getImgPath(store.AutoTypeList[i].img)" :alt="store.AutoTypeList[i].type">
     
-    <span class="type">
+    <span class="type capitalize">
       {{ store.AutoTypeList[i].type }}
     </span>
-    <span>
-      listings : N
+    <span class="capitalize listings">
+      {{store.AutoTypeList[i].listings}} listings
     </span>
   </div>
 
@@ -45,11 +45,19 @@ export default{
     // @include debug-one;
     // width: 60px;
     background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    & *{
+      padding-bottom: 5px;
+    }
     .img{
         width: 100%;
     }
     span{
         display: block;
+    }
+    .listings{
+      font-size: 0.85rem;
     }
 }
 </style>

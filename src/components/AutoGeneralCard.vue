@@ -3,13 +3,17 @@ import {store} from '../store'
 export default{
     data(){
       return{
-        store
+        store,
+		flagHeart:false
       }
     },
     methods:{
         getImgPath: function(imgPath){
         return new URL(`../assets/img/auto_cards/${imgPath}`, import.meta.url).href;
       },
+	  liked(){
+		this.flagHeart = !this.flagHeart
+	  }
     },
     props:{
         i: Number
@@ -19,7 +23,7 @@ export default{
 </script>
 
 <template>
-<div class="card">
+<div class="card pos-relative" @click="liked()">
 	<img :src="getImgPath(store.ListedAutos[i].img)" alt="">
 	<span class="name capitalize">
 		{{ store.ListedAutos[i].name   }}  <font-awesome-icon icon="fa-solid fa-circle-check"/>
@@ -36,6 +40,8 @@ export default{
 	<span class="capitalize">
 		<font-awesome-icon icon="fa-solid fa-gas-pump"/> {{ store.ListedAutos[i].fuelType }}
 	</span>
+	<font-awesome-icon icon="fa-solid fa-heart" class="icon pos-absolute d-none"
+		 :class="{'display':flagHeart}"/>
 </div>
 </template>
 
@@ -47,13 +53,18 @@ export default{
 .card{
     width: 100%;
 	padding: 5px;
-	// margin-bottom: 5px;
+	cursor: pointer;
 	background-color: white;
 	.name,.type{
 		display: block;
 	}
 	span{
-		margin-right: 5px;
+		margin: 5px;
+	}
+	.icon{
+		color: grey;
+		top: 10px;
+		right: 10px;
 	}
 }
 </style>

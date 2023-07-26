@@ -5,27 +5,33 @@ export const store = reactive({
                     AutoTypeList:[
                         {
                             type:'cabrio',
-                            img:'cabrio.jpg'
+                            img:'cabrio.jpg',
+                            listings:'4'
                         },
                         {
                             type:'hatchback',
-                            img:'hatchback.jpg'
+                            img:'hatchback.jpg',
+                            listings:'0'
                         },
                         {
                             type:'coupe',
-                            img:'coupe.jpg'
+                            img:'coupe.jpg',
+                            listings:'1'
                         },
                         {
                             type:'pick-up',
-                            img:'pickup.jpg'
+                            img:'pickup.jpg',
+                            listings:'0'
                         },
                         {
                             type:'sedan',
-                            img:'sedan.jpg'
+                            img:'sedan.jpg',
+                            listings:'2'
                         },
                         {
                             type:'SUV',
-                            img:'suv.jpg'
+                            img:'suv.jpg',
+                            listings:'1'
                         },
                     ],
                     ListedAutos:[
