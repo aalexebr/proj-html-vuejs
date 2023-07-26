@@ -62,7 +62,7 @@ export default{
                 <input type="text" placeholder="Location" class="text-center">
             </div>
             <div class="col-8">
-                <select name="" id="" class="text-center" v-model="selectType">
+                <select name="" id="" class="text-center">
                     <option value="">{{ selectType }}</option>
                     <option value="" v-for="(type,i) in store.AutoTypeList" :key="i" class="capitalize">
                         {{ store.AutoTypeList[i].type }}
