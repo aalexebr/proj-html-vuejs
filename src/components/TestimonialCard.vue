@@ -19,16 +19,17 @@ export default{
 </script>
 
 <template>
-	<div class="card">
-		<p>
+	<div class="card pos-relative">
+		<p class="text-center z-index-one pos-relative">
 			{{ store.Testimonials[i].text }}
 		</p>
-		<div class="img m-auto">
+		<div class="img m-auto z-index-one pos-relative">
 			<img :src="getImgPath(store.Testimonials[i].img)" alt="">
 		</div>
-		<p class="text-center">
+		<p class="text-center capitalize z-index-one pos-relative">
 			{{ store.Testimonials[i].name }}
 		</p>
+		<font-awesome-icon icon="fa-solid fa-quote-right" size="4x" class="icon pos-absolute"/>
 	</div>
 </template>
 
@@ -37,10 +38,26 @@ export default{
 @use '../assets/scss/debugger.scss' as *;
 @use '../assets/scss/utilities.scss' as *;
 .card{
-	@include debug-one;
-	padding: 30px 15px;
+	background-color: white;
+	padding: 40px 20px;
+	border-radius: 5px;
+	color: black;
 	.img{
 		width: 75px;
+	}
+	& *{
+		margin-bottom: 20px;
+	}
+	.icon{
+		color: #dfdfdf;
+		z-index: 0;
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%,0);
+		rotate: 30deg;
+	}
+	.z-index-one{
+		z-index: 1;
 	}
 }
 </style>

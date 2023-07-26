@@ -17,17 +17,24 @@ export default{
 <section class="testimonials">
     <div class="container">
         <div class="text-center">
-            icon
+            <div class="icons">
+                <font-awesome-icon icon="fa-regular fa-thumbs-up" size="3x" />
+                <div>
+                    <font-awesome-icon icon="fa-regular fa-star" v-for="e in 3"/>
+                </div>
+            </div>
+            
         </div>
         <h3 class="capitalize text-center">
             what are our custmers saying?
         </h3>
         <p class="text-center ">
-            opinions from our happy customers
+            Opinions from our happy customers
         </p>
         <div class="row">
-            <TestimonialCard class="col-3" :i="i"
-                v-for="(card,i) in store.Testimonials" :key="i"/>
+            <div class="col-3" v-for="(card,i) in store.Testimonials" :key="i">
+                <TestimonialCard :i="i"/>
+            </div>
         </div>
         <div class="scroll row justify-center">
             <div class="black "></div>
@@ -47,26 +54,35 @@ export default{
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
-    // height: 300px;
     color: white;
     padding: 40px;
+    .icons{
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 0.85rem;
+    }
+    h3,p{
+        margin-bottom: 10px;
+    }
     .black,.grey{
         display: inline-block;
         margin: 2px;
     }
     .black{
-        width: 40px;
+        width: 75px;
         border: 2px solid black;
         border-radius: 5px;
     }
     .grey{
-        width: 20px;
-        border: 2px solid rgb(94, 94, 94);
+        width: 40px;
+        border: 2px solid rgb(188, 188, 188);
         border-radius: 5px;
 
     }
     .col-3{
         margin: 20px 0;
+        padding: 10px;
     }
 }
 </style>

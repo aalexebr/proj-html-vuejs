@@ -67,7 +67,7 @@ export default{
                 </div>
             </div>
             <div class="button btn-no-border">
-                get to know us
+                get to know us &#8594
             </div>
         </div>
     </div>
