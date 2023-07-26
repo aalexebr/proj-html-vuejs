@@ -5,7 +5,8 @@ import AutoGeneralCard from './AutoGeneralCard.vue'
 export default{
     data(){
       return{
-        store
+        store,
+        listFlag : []
       }
     },
     components: {
@@ -21,13 +22,28 @@ export default{
                         count++
                     }
                 }
-                console.log(count)
                 this.store.AutoTypeList[i].listings = count
+            }
+        },
+        displayListed(i){
+            this.listFlag=[]
+            this.listFlag.push(this.store.AutoTypeList[i].type)
+            console.log(this.listFlag)
+        },
+        getTypes(){
+            for(let j=0; j<this.store.AutoTypeList.length; j++){
+                this.listFlag.push(this.store.AutoTypeList[j].type)
+            }
+        },
+        search(){
+            for(let j=0; j<this.store.AutoTypeList.length; j++){
+                this.listFlag.push(this.store.AutoTypeList[j].type)
             }
         }
     },
     created(){
-        this.getListedNum()
+        this.getListedNum();
+        this.getTypes()
     }
 }
 </script>
@@ -36,56 +52,58 @@ export default{
 <div class="container">
     <!-- search bar -->
     <div class="row">
-        <div class="col-8">
-            <input type="text" placeholder="Keywords" class="text-center">
-        </div>
-        <div class="col-8">
-            <input type="text" placeholder="Location" class="text-center">
-        </div>
-        <div class="col-8">
-            <select name="" id="" class="text-center">
-                <option value="">All</option>
-                <option value="" v-for="(type,i) in store.AutoTypeList" :key="i" class="capitalize">
-                    {{ store.AutoTypeList[i].type }}
-                </option>
-            </select>
-        </div>
-        <div class="col-8">
-            <select name="" id="" class="text-center">
-                <option value="">Brand</option>
-            </select>
-        </div>
-        <div class="col-8">
-            <select name="" id="" class="text-center">
-                <option value="">Fuel </option>
-            </select>
-        </div>
-        <div class="col-8">
-            <select name="" id="" class="text-center">
-                <option value="">Transmission</option>
-            </select>
-        </div>
-        <div class="col-8">
-            <select name="" id="" class="text-center">
-                <option value="">Status</option>
-            </select>
-        </div>
-        <div class="col-8">
-            <button class="button">
-                search
-            </button>
-        </div>
+        <!-- <form action -->
+            <div class="col-8">
+                <input type="text" placeholder="Keywords" class="text-center">
+            </div>
+            <div class="col-8">
+                <input type="text" placeholder="Location" class="text-center">
+            </div>
+            <div class="col-8">
+                <select name="" id="" class="text-center">
+                    <option value="">All</option>
+                    <option value="" v-for="(type,i) in store.AutoTypeList" :key="i" class="capitalize">
+                        {{ store.AutoTypeList[i].type }}
+                    </option>
+                </select>
+            </div>
+            <div class="col-8">
+                <select name="" id="" class="text-center">
+                    <option value="">Brand</option>
+                </select>
+            </div>
+            <div class="col-8">
+                <select name="" id="" class="text-center">
+                    <option value="">Fuel </option>
+                </select>
+            </div>
+            <div class="col-8">
+                <select name="" id="" class="text-center">
+                    <option value="">Transmission</option>
+                </select>
+            </div>
+            <div class="col-8">
+                <select name="" id="" class="text-center">
+                    <option value="">Status</option>
+                </select>
+            </div>
+            <div class="col-8">
+                <button class="button" @click="search()">
+                    search
+                </button>
+            </div>
+        <!-- </form> -->
     </div>
     <!-- car types -->
     <div class="row shadow">
-        <div class="col-2" v-for="(type,i) in store.AutoTypeList" :key="i">
+        <div class="col-2" v-for="(type,i) in store.AutoTypeList" :key="i" @click="displayListed(i)">
             <AutoTypeCard :i="i"/>
         </div>
             
     </div>
     <!-- auto cards results -->
     <div class="row wrap shadow">
-        <div class="col-3" v-for="(auto,i) in store.ListedAutos" :key="i">
+        <div class="col-3" v-for="(auto,i) in store.ListedAutos" :key="i" :class="{'d-none': !listFlag.includes(store.ListedAutos[i].type)}">
             <AutoGeneralCard :i="i"/>
         </div>     
     </div>

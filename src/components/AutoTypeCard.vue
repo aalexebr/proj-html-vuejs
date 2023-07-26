@@ -4,7 +4,6 @@ export default{
     data(){
       return{
         store,
-        // count:0
       }
     },
     components: {
@@ -14,19 +13,11 @@ export default{
         getImgPath: function(imgPath){
         return new URL(`../assets/img/auto_type/${imgPath}`, import.meta.url).href;
       },
-      getListingNum(item){
-        for(let j=0; j<this.store.ListedAutos.length; j++)
-        if(this.store.AutoTypeList[item].type == this.store.ListedAutos[j].type){
-          this.count++
-        }
-      }
     },
     props:{
         i: Number,
-        count: Number 
     },
-    created(){
-    }
+
 }
 </script>
 
