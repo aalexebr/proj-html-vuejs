@@ -51,8 +51,8 @@ export default{
 <template>
 <div class="container">
     <!-- search bar -->
-    <div class="row">
-        <!-- <form action -->
+    <form action="" @click.prevent="search()">
+        <div class="row">
             <div class="col-8">
                 <input type="text" placeholder="Keywords" class="text-center">
             </div>
@@ -88,12 +88,13 @@ export default{
                 </select>
             </div>
             <div class="col-8">
-                <button class="button" @click="search()">
+                <button class="button"  type="submit">
                     search
                 </button>
             </div>
-        <!-- </form> -->
-    </div>
+        </div>
+    </form>
+
     <!-- car types -->
     <div class="row shadow">
         <div class="col-2" v-for="(type,i) in store.AutoTypeList" :key="i" @click="displayListed(i)">
