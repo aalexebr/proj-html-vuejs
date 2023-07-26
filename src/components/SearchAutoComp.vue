@@ -6,7 +6,8 @@ export default{
     data(){
       return{
         store,
-        listFlag : []
+        listFlag : [],
+        selectType : 'All',
       }
     },
     components: {
@@ -38,6 +39,7 @@ export default{
         search(){
             for(let j=0; j<this.store.AutoTypeList.length; j++){
                 this.listFlag.push(this.store.AutoTypeList[j].type)
+                console.log(this.selectType)
             }
         }
     },
@@ -60,8 +62,8 @@ export default{
                 <input type="text" placeholder="Location" class="text-center">
             </div>
             <div class="col-8">
-                <select name="" id="" class="text-center">
-                    <option value="">All</option>
+                <select name="" id="" class="text-center" v-model="selectType">
+                    <option value="">{{ selectType }}</option>
                     <option value="" v-for="(type,i) in store.AutoTypeList" :key="i" class="capitalize">
                         {{ store.AutoTypeList[i].type }}
                     </option>
@@ -103,8 +105,8 @@ export default{
             
     </div>
     <!-- auto cards results -->
-    <div class="row wrap shadow">
-        <div class="col-3" v-for="(auto,i) in store.ListedAutos" :key="i" :class="{'d-none': !listFlag.includes(store.ListedAutos[i].type)}">
+    <div class="row wrap space-around">
+        <div class="col-3 shadow" v-for="(auto,i) in store.ListedAutos" :key="i" :class="{'d-none': !listFlag.includes(store.ListedAutos[i].type)}">
             <AutoGeneralCard :i="i"/>
         </div>     
     </div>

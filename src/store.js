@@ -92,9 +92,9 @@ export const store = reactive({
                             fuelType:'gasoline',
                         },
                         {
-                            name:'volswagen taigo',
-                            type:'hatchback',
-                            img:'vw_tcross.jpg', 
+                            name:'volswagen passat',
+                            type:'sedan',
+                            img:'vw-passat.jpg', 
                             price:'59.000',
                             brand:'seat',
                             fuelType:'gasoline',
