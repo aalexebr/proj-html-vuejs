@@ -25,7 +25,7 @@ export default{
         <div class="img">
             <img :src="getImgPath(store.Articles[i].img)" alt="">
         </div>
-        <p>
+        <p class="text-center">
             {{ store.Articles[i].date }} - {{ store.Articles[i].source }}
         </p>
         <h3>
@@ -34,8 +34,10 @@ export default{
         <p>
             {{ store.Articles[i].text.substr(0,50) }} [...]
         </p>
-        <div class="button btn-no-border m-auto capitalize ">
-            more
+        <div class="text-center">
+            <div class="button btn-no-border capitalize">
+                more
+            </div>
         </div>
     </div>
 </template>
@@ -46,8 +48,14 @@ export default{
 @use '../assets/scss/utilities.scss' as *;
 
 .card{
-    padding: 10px;
-    @include debug-one;
+    padding:20px;
+    // @include debug-one;
     border-radius: 5px;
+    height: 100%;
+    -webkit-box-shadow: 0px 0px 12px 5px #AAAAAA; 
+    box-shadow: 0px 0px 12px 5px #AAAAAA;
+    p,h3{
+        margin-bottom: 15px;
+    }
 }
 </style>

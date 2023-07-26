@@ -9,12 +9,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faBars, faChevronLeft, faChevronRight, faEnvelope, faLocationDot, faPhoneVolume,faCar, faWrench, faCircleCheck, faDollarSign, faGasPump, faHeart, faQuoteRight,} from '@fortawesome/free-solid-svg-icons'
+import { faBars, faChevronLeft, faChevronRight, faEnvelope, faLocationDot, faPhoneVolume,faCar, faWrench, faCircleCheck, faDollarSign, faGasPump, faHeart, faQuoteRight, } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faThumbsUp,faStar } from '@fortawesome/free-regular-svg-icons'
+import { faThumbsUp,faStar,faSun, } from '@fortawesome/free-regular-svg-icons'
 
 /* add icons to the library */
-library.add(faLocationDot, faPhoneVolume, faEnvelope,faFacebookF,faInstagram,faTwitter,faBars,faChevronRight,faChevronLeft,faCar,faWrench,faCircleCheck,faDollarSign,faGasPump,faHeart,faThumbsUp,faStar,faQuoteRight)
+library.add(faLocationDot, faPhoneVolume, faEnvelope,faFacebookF,faInstagram,faTwitter,faBars,faChevronRight,faChevronLeft,faCar,faWrench,faCircleCheck,faDollarSign,faGasPump,faHeart,faThumbsUp,faStar,faQuoteRight,faSun)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)

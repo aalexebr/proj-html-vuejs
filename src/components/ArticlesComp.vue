@@ -20,9 +20,9 @@ export default{
 
 <template>
     <section>
-        <p>
-            icon
-        </p>
+        <div class="circle pos-relative m-auto">
+            <font-awesome-icon icon="fa-regular fa-thumbs-up" size="3x" class="icon pos-absolute"/>
+        </div>
         <h3 class="text-center capitalize">
             recent articles
         </h3>
@@ -30,8 +30,9 @@ export default{
             Useful info about car.
         </p>
         <div class="row">
-            <ArticleCard class="col-3" :i="i"
-                v-for="(article,i) in store.Articles" :key="i"/>
+            <div class="col-3" v-for="(article,i) in store.Articles" :key="i">
+                <ArticleCard :i="i"/>
+            </div>
         </div>
     </section>
 </template>
@@ -40,4 +41,25 @@ export default{
 @use '../assets/scss/main.scss' as *;
 @use '../assets/scss/debugger.scss' as *;
 @use '../assets/scss/utilities.scss' as *;
+section{
+    padding: 40px 0 40px 0;
+    .circle,h3{
+        margin-bottom: 10px;
+    }
+}
+.col-3{
+    padding: 20px;
+}
+.circle{
+    height: 75px;
+    width: 75px;
+    background-color: black;
+    color: white;
+    border-radius: 9999px;
+    .icon{
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
 </style>

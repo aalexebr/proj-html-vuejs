@@ -40,5 +40,8 @@ export default{
 @use '../assets/scss/main.scss' as *;
 @use '../assets/scss/debugger.scss' as *;
 @use '../assets/scss/utilities.scss' as *;
+.container{
+    max-width: 1100px;
+}
 
 </style>

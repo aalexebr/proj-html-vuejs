@@ -148,7 +148,7 @@ export const store = reactive({
                             img:'news-autocar-6.jpg',
                             date:'29-01-1886',
                             source:'auto car',
-                            title: 'Is the AURIUS a secret weapon from NorthKorea',
+                            title: 'AURIUS NorthKoreas new weapon',
                             text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt accusamus, nihil cumque unde omnis?'
                         }
                     ],
