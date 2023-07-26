@@ -41,7 +41,7 @@ export default{
                 <div class="col-25">
                     <font-awesome-layers class="fa-lg">
                         <font-awesome-icon icon="fa-solid fa-car" size="2x"/>
-                        <font-awesome-icon icon="fa-solid fa-wrench" transform="right-7" rotation="" size="2x"/>
+                        <font-awesome-icon icon="fa-solid fa-wrench" transform="right-11 up-2" size="2x" class="wrench"/>
                     </font-awesome-layers>
                 </div>
                 <div class="col-auto">
@@ -111,8 +111,9 @@ export default{
     
 }
 .col-5{
-    // @include debug-two;
-    // height: 100px;
+    .wrench{
+        rotate: -45deg;
+    }
     padding: 15px;
     & *{
     margin-bottom: 10px;

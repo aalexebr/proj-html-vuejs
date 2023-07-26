@@ -11,6 +11,23 @@ export default{
     components: {
         AutoTypeCard,
         AutoGeneralCard
+    },
+    methods:{
+        getListedNum(){
+            for(let i=0; i<this.store.AutoTypeList.length; i++){
+                let count = 0
+                for(let j=0; j<this.store.ListedAutos.length; j++){
+                    if(this.store.AutoTypeList[i].type ==this.store.ListedAutos[j].type){
+                        count++
+                    }
+                }
+                console.log(count)
+                this.store.AutoTypeList[i].listings = count
+            }
+        }
+    },
+    created(){
+        this.getListedNum()
     }
 }
 </script>
@@ -28,6 +45,9 @@ export default{
         <div class="col-8">
             <select name="" id="" class="text-center">
                 <option value="">All</option>
+                <option value="" v-for="(type,i) in store.AutoTypeList" :key="i" class="capitalize">
+                    {{ store.AutoTypeList[i].type }}
+                </option>
             </select>
         </div>
         <div class="col-8">
